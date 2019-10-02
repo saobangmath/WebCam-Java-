@@ -22,7 +22,6 @@ public class MyWebCam{
         JButton capture_btn = new JButton("Capture");
         capture_btn.setBounds(0, 500, 50, 50);
         capture_btn.setContentAreaFilled(false);
-        capture_btn.setBackground(Color.green);
         capture_btn.setOpaque(true);
         //set up Webcam Panel
         WebcamPanel my_panel = new WebcamPanel(webcam);
