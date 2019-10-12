@@ -26,15 +26,14 @@ public class MyWebCam{
         webcam.setViewSize(WebcamResolution.VGA.getSize());
         //set up click button
         JFrame window = new JFrame("Open CV");
-        window.setSize(800, 800);
+        window.setSize(400, 500);
 
         JButton capture_btn = new JButton("Capture");
-        capture_btn.setBounds(850, 450, 200, 200);
-        capture_btn.setContentAreaFilled(false);
-        capture_btn.setOpaque(true);
+        capture_btn.setBounds(0, 500, 40, 20);
+
         //set up Webcam Panel
         WebcamPanel my_panel = new WebcamPanel(webcam);
-        my_panel.setBounds(0,0, 800, 800);
+        my_panel.setBounds(0,0, 400, 300);
         my_panel.setFPSDisplayed(true);
         my_panel.setImageSizeDisplayed(true);
         my_panel.setDisplayDebugInfo(true);
@@ -83,7 +82,7 @@ public class MyWebCam{
             // Saving the output image
             Imgcodecs.imwrite("D://test.jpg", image);
             Mat markedImage = new Mat(image,rectCrop);
-            Imgcodecs.imwrite("D://test.jpg", markedImage );
+            Imgcodecs.imwrite("D://test.jpg", markedImage ); // change to the link of the image you want to
         }
     }
 }
